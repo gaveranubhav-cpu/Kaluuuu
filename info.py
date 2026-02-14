@@ -23,8 +23,8 @@ API_HASH = environ.get('API_HASH', '')
 BOT_TOKEN = environ.get('BOT_TOKEN', '')
 ADMINS = [int(admin) if id_pattern.search(admin) else admin for admin in environ.get('ADMINS', '').split()]
 USERNAME = environ.get('USERNAME', "https://telegram.me/Silicon_Official")
-LOG_CHANNEL = int(environ.get('LOG_CHANNEL', ''))
-MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://t.me/LuciferCinema')
+LOG_CHANNEL = int(environ.get('LOG_CHANNEL', '-1003519088776'))
+MOVIE_GROUP_LINK = environ.get('MOVIE_GROUP_LINK', 'https://infinityaudiosearchinggroup')
 
 # Pics 
 
@@ -47,9 +47,9 @@ COLLECTION_NAME = environ.get('COLLECTION_NAME', 'Silicon_Files')
 
 # Verify/Shortlink Settings 
 
-IS_VERIFY = is_enabled('IS_VERIFY', True)
-LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', ''))
-LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', ''))
+IS_VERIFY = is_enabled('IS_VERIFY', False)
+LOG_VR_CHANNEL = int(environ.get('LOG_VR_CHANNEL', '-1003519088776'))
+LOG_API_CHANNEL = int(environ.get('LOG_API_CHANNEL', '-1003519088776'))
 TUTORIAL = environ.get("TUTORIAL", "https://t.me/Silicon_Bot_Update")
 TUTORIAL2 = environ.get("TUTORIAL2", "https://t.me/Silicon_Bot_Update")
 TUTORIAL3 = environ.get("TUTORIAL3", "https://t.me/Silicon_Bot_Update")
@@ -72,8 +72,8 @@ AUTH_CHANNELS = [int(ch) for ch in auth_channels.split() if ch and id_pattern.ma
 
 # Channels
 
-SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '-1001816697837'))
-request_channel = environ.get('REQUEST_CHANNEL', '-1002470027489')
+SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '-1003219334269'))
+request_channel = environ.get('REQUEST_CHANNEL', '')
 REQUEST_CHANNEL = int(request_channel) if request_channel and id_pattern.search(request_channel) else None
 
 # Movie Update Notification Settings/ Auto Index Settings
@@ -115,7 +115,7 @@ SEASONS = [("sᴇᴀsᴏɴ 𝟷", "s01"), ("sᴇᴀsᴏɴ 𝟸", "s02"), ("sᴇ�
 # Stream Settings 
 
 IS_PREMIUM_STREAM = is_enabled('IS_PREMIUM_STREAM', False) # True To Allow Stream For Premium User Only
-BIN_CHANNEL = environ.get("BIN_CHANNEL", "") # Channel Where Files sent For stream
+BIN_CHANNEL = environ.get("BIN_CHANNEL", "-1003745029204") # Channel Where Files sent For stream
 if len(BIN_CHANNEL) == 0:
     print('Error BIN_CHANNEL is missing, exiting now')
     exit()
