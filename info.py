@@ -73,7 +73,7 @@ AUTH_CHANNELS = [int(ch) for ch in auth_channels.split() if ch and id_pattern.ma
 # Channels
 
 SUPPORT_GROUP = int(environ.get('SUPPORT_GROUP', '-1003219334269'))
-request_channel = environ.get('REQUEST_CHANNEL', '')
+request_channel = environ.get('REQUEST_CHANNEL', '-1003749791880')
 REQUEST_CHANNEL = int(request_channel) if request_channel and id_pattern.search(request_channel) else None
 
 # Movie Update Notification Settings/ Auto Index Settings
